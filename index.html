@@ -7,30 +7,60 @@
     <script>
         let messages = [" EXPERIENCE  " ," > 5 months of electrical work" , " > Installing a surveillance camera system" ," > Sensors", " > 	Network", " SKILL "," > Solar energy installation"," > Installing sensors" ," > Wi-Fi-router programming ", " > Linux , windows", " > C++, java , html , css ", " > Excel , word"];
         let index = 0;
-
         function changeMessage() {
             document.getElementById("message").textContent = messages[index];
             index = (index + 1) % messages.length;
         }
-
         setInterval(changeMessage, 2500);
         window.onload = changeMessage; 
+  
     </script>
     <style>
         body {
+          
             display: flex;
             justify-content: center;
             align-items: center;
             height: 75vh;
             margin: 0;
             background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif; 
+                    
         }
-
+          
         .container {
             text-align: center;
         }
-
+h2{
+    display :flex;
+    color : #35424a;
+    font-size :10px;
+    letter-spacing:5px;
+    justify-content: center;
+}
+h2 span {
+    display : inline-block;
+    animation: bounce 0.5s ease infinite;
+}  
+h2 span:nth-child(2){
+    animation-delay:0.2s;
+}    
+    h2 span:nth-child(3){
+    animation-delay:0.3s;
+}    
+h2 span:nth-child(4){
+    animation-delay:0.4s;
+}        
+    
+    @keyframes bounce{
+        0%, 100% {
+            transform: transLateY(0);      
+        }
+        50% {
+            transform: translatey(-5px);
+        }
+    }
+    
         h1 {
             font-size: 3em;
             color: #35424a;
@@ -44,8 +74,18 @@
 </head>
 <body>
     <div class="container">
+        
+        <h2 >
+            <span>2</span>
+            <span>0</span>
+            <span>2</span>
+            <span>4</span>
+        </h2>
+        
+        
         <h1 id="name">Parwar Moussa</h1>
         <p id="message">Welcome!</p>
+        
     </div>
 </body>
 </html>
